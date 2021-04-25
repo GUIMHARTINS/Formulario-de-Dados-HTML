@@ -7,12 +7,13 @@
     <title>Tarefa 7</title>
 </head>
 <body>
+    <form onsubmit="alert('Dados validados com sucesso')">
     <fieldset>
         <legend>Dados</legend>
         
-        <input type="text" placeholder="Nome">
-        <input type="date">
-        <input type="number" placeholder="Renda Mensal">
+        <input type="text" minlength="3" maxlength="60" placeholder="Nome">
+        <input type="date" min="1990-01-01" max="2003-31-12">
+        <input type="number" min="1000" max="10000" step="0.01" placeholder="Renda Mensal">
         
         <select>
             <option hidden disable selected>Estado Civil</option>
@@ -30,10 +31,11 @@
     </fieldset>
 
     <fieldset>
+        
         <legend>Contato</legend>
-        <input type="text" placeholder="E-mail">
-        <input type="number" placeholder="Telefone">
-        <input type="number" placeholder="Celular">
+        <input type="email" placeholder="E-mail">
+        <input type="tel" placeholder="Telefone" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}">
+        <input type="tel" placeholder="Celular" pattern="[0-9]{2} [0-9]{4}-[0-9]{4}">
     </fieldset>
 
     <fieldset>
@@ -66,9 +68,11 @@
 
     <fieldset>
         <legend>Ações</legend>
-        <input type="button" value="Limpar">
-        <input type="button" value="Cancelar">
-        <input type="button" value="Cadastrar">
+        <button type="reset">Limpar</button>
+        <button type="reset">Cancelar</button>
+        <button type="submit">Cadastrar</button>
     </fieldset>
+    </body>
+    </form>
 </body>
 </html>
